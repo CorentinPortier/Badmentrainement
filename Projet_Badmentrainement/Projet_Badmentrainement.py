@@ -8,8 +8,9 @@ from Entrainement import Entrainement
 
 liste_terrains = []
 liste_terrains.append(Terrain("double"))
-liste_terrains.append(Terrain("simple"))
 liste_terrains.append(Terrain("double"))
+liste_terrains.append(Terrain("simple"))
+liste_terrains.append(Terrain("simple"))
 
 gymnase_Annecy = Gymnase("Gymnase des Romains", liste_terrains, "Annecy")
 
@@ -18,17 +19,18 @@ liste_des_joueurs.append(Joueur("Audrey"))
 liste_des_joueurs.append(Joueur("Corentin"))
 liste_des_joueurs.append(Joueur("Corentin"))
 liste_des_joueurs.append(Joueur("Nori"))
-liste_des_joueurs.append(Joueur("Navetodul"))
+#liste_des_joueurs.append(Joueur("Navetodul"))
+#liste_des_joueurs.append(Joueur("Cara"))
 
 entrainement_A_Annecy = Entrainement(gymnase_Annecy, liste_des_joueurs)
 
 print(entrainement_A_Annecy)
 
-for elt in entrainement_A_Annecy.participants:
-    print(elt.ID, elt.name)
+entrainement_A_Annecy.afficherTousLesMatchs()
 
-entrainement_A_Annecy.afficherLesMatchs()
-
+for i in range(len(liste_des_joueurs)-1):
+    print()
+    entrainement_A_Annecy.calculerUnTour()
 
 #b = [['' for x in range(len(a))] for y in range(len(a))]
 

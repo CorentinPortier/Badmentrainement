@@ -8,7 +8,7 @@ class Joueur(object):
         self.adversaires = []
         self.opposant = None
     def __str__(self):
-        return self.name
+        return str(self.ID) + self.name
 
 
 

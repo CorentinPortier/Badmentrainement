@@ -18,7 +18,7 @@ liste_des_joueurs.append(Joueur("Audrey"))
 liste_des_joueurs.append(Joueur("Corentin"))
 liste_des_joueurs.append(Joueur("Corentin"))
 liste_des_joueurs.append(Joueur("Nori"))
-#liste_des_joueurs.append(Joueur("Navetodul"))
+liste_des_joueurs.append(Joueur("Navetodul"))
 
 entrainement_A_Annecy = Entrainement(gymnase_Annecy, liste_des_joueurs)
 

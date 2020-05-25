@@ -1,0 +1,26 @@
+Problématique : pendant les entraînements de badminton, lorsqu'il y a du monde, on fait des matchs au temps (par exemple on tourne toutes les 10 minutes)
+À ce moment, il faut repartir de nouvelles personnes sur les terrains
+On aime bien les répartir aléatoirement, mais des fois l'aléatoire est un troll et des gens ne jouent jamais et d'autres jouent toujours contre les mêmes personnes
+Il existe des tableaux prédéfinis pour maximiser le mélange au sein d'une séance, mais dès qu'une personne arrive ou part ça ne marche plus
+Objectif : créer un truc informatique qui règle ce problème
+Contraintes : La solution doit être facile d'accès pour des gens qui ne sont pas informaticiens professionnels
+La solution doit permettre de rentrer les noms des participants à l'avance afin qu'ils n'aient qu'à «cocher» leur présence dès qu'ils arrivent et décocher quand ils partent
+La solution doit tenir compte du nombre de terrains dans le gymnase et de la volonté de faire plutôt des matchs en simple ou en double ou les deux
+Il doit être facile de générer la répartition de la ronde suivante (d'un simple clic)
+
+C'est pas pour un tournoi c'est pour les entraînements. C'est pour ça qu'on va au plus basique
+Le club renseigne les noms des licenciés, il suffit ensuite aux gens de cocher leur nom quand ils arrivent et décocher quand ils repartent
+Si quelqu'un veut utiliser le logiciel pour un tournoi, ce n'est pas notre problème, il se débrouille tout seul pour gérer les équipes scores niveaux etc, ce n'est pas le but du logiciel
+
+Un terrain normal accepte soit un seul match en simple (un seul 1v1) soit un seul match en double (un seul 2v2)
+Un terrain de simple uniquement accepte un seul match en simple (un seul 1v1)
+Un terrain de double uniquement accepte un seul match en double (un seul 2v2)
+
+Au fait hier avec Ludo on a discuté de l'ordre d'importance des critères :
+Critère n°1 : Il faut varier ceux qui jouent et ceux qui passent leur tour.
+Critère n°2 : Il faut varier ceux qui font du simple et ceux qui font du double.
+Critère n°3 : Il faut varier les personnes qui se rencontrent
+
+Je pense qu'il faut pouvoir :
+- Régler d'une manière ou d'une autre la proportion de simple et de double souhaitée
+- Permettre d'ignorer cette préférence et faire surtout du double en cas de forte affluence pour éviter que les gens passent leur tour

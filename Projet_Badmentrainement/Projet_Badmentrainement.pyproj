@@ -21,19 +21,51 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Entrainement.py">
+    <Compile Include="Classes\Program\Entrainement.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Gymnase.py">
+    <Compile Include="Classes\Program\Gymnase.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Joueur.py">
+    <Compile Include="Classes\Program\Joueur.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Classes\Windows\Window_GymPage.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Classes\Windows\Window_MainPage.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Classes\Windows\Window_MatchPage.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Classes\Windows\Window_PlayerPage.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Classes\Windows\Window_RatioPage.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Classes\Windows\Window_StartPage.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Ludo1.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="moduleDeTests.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Projet_Badmentrainement.py" />
-    <Compile Include="Terrain.py">
+    <Compile Include="Classes\Program\Terrain.py">
       <SubType>Code</SubType>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Classes\" />
+    <Folder Include="Classes\Program\" />
+    <Folder Include="Classes\Windows\" />
+    <Folder Include="Classes\Windows\SubWindows\" />
+    <Folder Include="Classes\Windows\SubWindows\SubWindows_MatchPage\" />
+    <Folder Include="Classes\Windows\SubWindows\SubWindows_MainPage\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in

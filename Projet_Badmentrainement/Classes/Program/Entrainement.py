@@ -6,11 +6,13 @@ class Entrainement(object):
     NbDeTours = 0
     def __init__(self, gymnase, participants):
         self.type_entrainement = self.demanderTypentrainement()
+        self.ratio = self.demanderRatio()
         self.gymnase = gymnase
         self.participants = participants
         #random.shuffle(self.participants)
-        self.nb_participants = self.compterNbParticipants()
+        self.nb_participants = len(self.participants)
         self.liste_des_matchs = []
+        self.liste_choix_possible = []
 
     def __str__(self):
         return "\nC'est un entrainement de type {}. Il se passe dans le gymnase \"{}\" à {}. Il y a {} participants.\n".format(self.type_entrainement,
@@ -26,9 +28,8 @@ class Entrainement(object):
             else:
                 print("Veuillez choisir entre \"1v1\" et \"2v2\"")
         return type_entrainement
-
-    def compterNbParticipants(self):
-        return len(self.participants)
+    def demanderRatio(self):
+        return 100
 
     def afficherTousLesMatchs(self):
         self.liste_des_matchs = list(itertools.combinations(self.participants, 2))
@@ -51,17 +52,14 @@ class Entrainement(object):
                     for joueur in joueurs:
                         if(J.ID != joueur.ID):
                             if(joueur not in(J.adversaires)):
-                                J.opposant = joueur
-                                J.adversaires.append(joueur)
-                                joueur.opposant = J
-                                joueur.adversaires.append(J)
+                                J.setOpposant(joueur)
                                 joueurs.remove(joueur)
                                 print("{} joue contre {}".format(J, J.opposant))
                                 break;
             self.resetOpposants()
             self.checkToutLeMondeAJouerContreToutLeMonde()
         else:
-            print("Nombre impair de joueurs.")
+            print("Nombre impair de joueurs. :àfaire:")
 
     def resetOpposants(self):
         for J in self.participants:
